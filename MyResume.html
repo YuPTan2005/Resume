@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Tan Yu Ping</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @import "tailwindcss";
-      @custom-variant dark (&:where(.dark, .dark *));
-    </style>
+    
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
+    </style>
   </head>
   <body
     class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col font-sans"
@@ -72,9 +74,9 @@
             class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           >
             <!-- Sun Icon (shown in dark mode) -->
-            <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-lg hidden"></i>
+            <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-lg"></i>
             <!-- Moon Icon (shown in light mode) -->
-            <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-lg hidden"></i>
+            <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-lg"></i>
           </button>
 
           <!-- Mobile Menu Button -->
@@ -155,7 +157,7 @@
               </p>
             </div>
 
-            <p class="text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl leading-[1.625]">
               Passionate software engineer with over 4 years of experience building scalable web applications, responsive user interfaces, and robust backend microservices. Driven by clean code, continuous learning, and creating impactful user experiences.
             </p>
 
@@ -323,7 +325,7 @@
                 </span>
               </div>
 
-              <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-2 leading-relaxed">
+              <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-2 leading-[1.625]">
                 <li>Architected and implemented responsive web dashboards using React, TypeScript, and Tailwind CSS, increasing user engagement by 35%.</li>
                 <li>Designed microservices REST APIs with Node.js & PostgreSQL, handling over 2M monthly API requests.</li>
                 <li>Mentored junior developers, conducted code reviews, and promoted best practices in CI/CD pipeline automation.</li>
@@ -357,7 +359,7 @@
                 </span>
               </div>
 
-              <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-2 leading-relaxed">
+              <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-2 leading-[1.625]">
                 <li>Developed full-stack web applications utilizing Python (FastAPI) and Next.js.</li>
                 <li>Optimized database queries and introduced Redis caching layer, reducing latency by 45%.</li>
                 <li>Collaborated closely with UI/UX designers to translate Figma wireframes into pixel-perfect frontend layouts.</li>
@@ -391,7 +393,7 @@
                 </span>
               </div>
 
-              <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-2 leading-relaxed">
+              <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-2 leading-[1.625]">
                 <li>Built responsive landing pages and custom web modules using JavaScript, HTML5, and CSS.</li>
                 <li>Fixed legacy code bugs and assisted in unit testing to improve overall codebase stability.</li>
               </ul>
@@ -431,7 +433,7 @@
                 AI Analytics Dashboard
               </h3>
 
-              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-[1.625]">
                 A real-time data visualization platform that integrates predictive ML models with dynamic interactive charts for business intelligence.
               </p>
             </div>
@@ -465,7 +467,7 @@
                 E-Commerce Mobile First Web App
               </h3>
 
-              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-[1.625]">
                 Full-featured online store with payment gateway integration, user authentication, shopping cart state management, and administrative dashboard.
               </p>
             </div>
@@ -499,7 +501,7 @@
                 Task Management & Chat App
               </h3>
 
-              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-[1.625]">
                 A collaborative web application offering real-time messaging, task assignment Kanban boards, and WebSockets-driven live updates.
               </p>
             </div>
@@ -653,11 +655,11 @@
 
       function updateThemeIcons(isDark) {
         if (isDark) {
-          lightIcon.classList.remove('hidden');
-          darkIcon.classList.add('hidden');
+          lightIcon.style.display = 'inline-block';
+          darkIcon.style.display = 'none';
         } else {
-          lightIcon.classList.add('hidden');
-          darkIcon.classList.remove('hidden');
+          lightIcon.style.display = 'none';
+          darkIcon.style.display = 'inline-block';
         }
       }
 
